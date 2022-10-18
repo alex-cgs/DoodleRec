@@ -1,5 +1,7 @@
 # ONGOING/UNFINISHED BSP1 - DoodleRec-Deep-Learning-Image-Recognition
 DoodleRec - A Deep Learning algorithm trained on 10 objects from Google Quick Draw's data set, is my first Bachelor Semester Project at the University of Luxembourg.
+
+Current step: program the training algorithm and train it.
 #
 ## How to use this program (so far):
 
