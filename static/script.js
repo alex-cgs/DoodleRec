@@ -1,4 +1,5 @@
 /*script.js
+Github repository for this BSP: https://github.com/CookNChips/BSP1---DoodleRec-Deep-Learning-Image-Recognition
 For easier use, please execute the DoodleRec.bat file provided with this, or read the README file*/
 
 const canvas = document.getElementById("canvas"); //Create a canvas element
