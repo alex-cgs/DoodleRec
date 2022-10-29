@@ -10,7 +10,7 @@ This BSP has been produced by Tinouert Alexandre Adrian, under the supervision o
 ## How to use this program (so far):
 
 ### - If you want to try the early version of the user interface:
-#### - Easy way:
+#### - Easy way (only on Windows, might upload a .sh soon):
 1. Execute / Double-click DoodleRec.bat or its shortcut.
 2. If the page doesn't display the application, refresh the page.
 
