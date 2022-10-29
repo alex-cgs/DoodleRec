@@ -30,11 +30,11 @@ function draw(e) {
     if (!painting) return;
     ctx.lineWidth = 15;
     ctx.lineCap = "square";
-
-    ctx.lineTo(e.clientX, e.clientY);
+    ctx.lineTo(e.clientX - 100, e.clientY - 100);
     ctx.stroke();
+    ctx.strokeStyle = "#FFFFFF";
     ctx.beginPath()
-    ctx.moveTo(e.clientX, e.clientY);
+    ctx.moveTo(e.clientX - 100, e.clientY - 100);
 }
 
 canvas.addEventListener('mousedown', startPos);
@@ -49,7 +49,6 @@ setInterval(function(){
     imgDataBW.push(imgData.data[3]);
     for (var i = 7; i < imgData.data.length + 1; i = i + 4) {
         imgDataBW.push(imgData.data[i]);
-        document.getElementById("dataCont").innerHTML=imgDataBW;
     }
 
     var sendData = {
@@ -65,6 +64,18 @@ setInterval(function(){
             })
           })
 
-}, 500);
+}, 1000);
 
+url = window.location.href.replace('/index.html', '') + '/';
 
+function f1() {
+  alert("f1 called");
+  //form validation that recalls the page showing with supplied inputs.    
+}
+window.onload = function() {
+  document.getElementById("Save").onclick = function fun() {
+      alert("hello");
+      f1();
+      //validation code to see State field is mandatory.  
+  }
+}

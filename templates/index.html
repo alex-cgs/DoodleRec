@@ -8,10 +8,16 @@
         <title>DoodleRec</title>
     </head>
     <body>
+        <aside>
+            <div><h1 class="heading1">DoodleRec - Early Version</h1></div>
+            <div><h2><a href="https://github.com/CookNChips/BSP1---DoodleRec-Deep-Learning-Image-Recognition">Github Repository</a> of this project.</h2></div><hr>
+            <div><h2>How to use:</h2></div>
+            <div><h5>1/ Create a doodle by clicking and dragging on the left canvas.</h5></div>
+            <div><h5>2/ Retrieve your image data by clicking on the dedicated button.</h5></div>
+            <div><h5>This app only works using a desktop or a laptop, as I encourage to use it fullscreen.</h5></div>
+        </aside>
         <canvas id="canvas" height="28" width="28"></canvas>
-        <div id="dataCont" class="B1">
-            Your data is: /bsp/templates/script.js
-        </div>
+        <a href="{{ url_for('download_data') }}"><button type="button">Retrieve your Data!</button></a>
         <script src="{{ url_for('static', filename='/script.js') }}"></script>
     </body>
 </html>
