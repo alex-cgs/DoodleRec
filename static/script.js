@@ -65,17 +65,3 @@ setInterval(function(){
           })
 
 }, 1000);
-
-url = window.location.href.replace('/index.html', '') + '/';
-
-function f1() {
-  alert("f1 called");
-  //form validation that recalls the page showing with supplied inputs.    
-}
-window.onload = function() {
-  document.getElementById("Save").onclick = function fun() {
-      alert("hello");
-      f1();
-      //validation code to see State field is mandatory.  
-  }
-}

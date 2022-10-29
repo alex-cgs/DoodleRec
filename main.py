@@ -5,7 +5,6 @@
 import os #To open the files needed for the Flask application, as well as the user's matrix yourmatrix.txt file
 import json #To receive the JSON data from JavaScript requests
 from flask import * #For the web application
-import numpy as np #For testing datasets and open the data base that are .npy files
 
 
 #Initialize the Flask applications with the static files
