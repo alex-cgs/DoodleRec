@@ -1,4 +1,4 @@
-# IMPENDING FIRST VERSION OF TECHNICAL DELIVERY BSP1 - DoodleRec-Deep-Learning-Image-Recognition
+# IMPENDING FIRST VERSION OF TECHNICAL DELIVERABLE BSP1 - DoodleRec-Deep-Learning-Image-Recognition
 DoodleRec - A Deep Learning algorithm trained on 10 objects from Google Quick Draw's data set, is my first Bachelor Semester Project at the University of Luxembourg.
 
 Current step: program the training algorithm and train it. Main GUI and UX done! You can use the web app to input doodles!
