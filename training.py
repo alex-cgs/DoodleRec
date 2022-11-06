@@ -1,5 +1,6 @@
 '''training.py'''
 '''Github repository for this BSP: https://github.com/CookNChips/BSP1---DoodleRec-Deep-Learning-Image-Recognition'''
+'''Make sure that the .csv file is not empty'''
 '''Only usable via IDLE for now'''
 
 

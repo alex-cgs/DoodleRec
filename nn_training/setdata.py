@@ -1,5 +1,6 @@
-#setdata.py
-#Prepares a random set of data of 10000 doodles
+'''setdata.py'''
+'''Prepares a random set of data of 10000 doodles'''
+'''Make sure that the https://onedrive.live.com/?id=57F1EE6756D7C71D%2125333&cid=57F1EE6756D7C71D .npy files are placed at nn_training/data folder'''
 
 #Import needed libraries to exploit data
 import csv
