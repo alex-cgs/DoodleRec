@@ -27,7 +27,7 @@ This BSP has been produced by Tinouert Alexandre Adrian, under the supervision o
 4. The data.csv file is updated (located in nn_training/data file).
 
 ### - If you want to train the Neural Network on said data:
-1. Make sure that the data.csv file is not empty or corrupted.
+1. Make sure that the data.csv file is not empty or corrupted. The provided .csv file contains the data of 10000 random doodles you can use and is a perfect fit.
 2. Launch training.py with an IDLE.
 3. Choose Learning Rate and Iterations
 4. Enjoy!
