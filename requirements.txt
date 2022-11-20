@@ -1,0 +1,8 @@
+flask
+numpy
+pandas
+matplotlib.pyplot
+os
+csv
+json
+random

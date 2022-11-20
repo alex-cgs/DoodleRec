@@ -1,6 +1,5 @@
 '''setdata.py'''
-'''Prepares a random set of data of 10000 doodles'''
-'''Make sure that the https://onedrive.live.com/?id=57F1EE6756D7C71D%2125333&cid=57F1EE6756D7C71D .npy files are placed at nn_training/data folder'''
+'''Prepares a random set of data of 10000 doodles from .npy files to a .csv file'''
 
 #Import needed libraries to exploit data
 import csv
@@ -20,19 +19,19 @@ except:
 print("Please wait...")
 
 #Import all the data from .npy files
-apple = np.load(os.getcwd() + "\\data\\apple.npy", allow_pickle=True)
-basketball = np.load(os.getcwd() + "\\data\\basketball.npy", allow_pickle=True)
-circle = np.load(os.getcwd() + "\\data\\circle.npy", allow_pickle=True)
+airplane = np.load(os.getcwd() + "\\data\\airplane.npy", allow_pickle=True)
 cookie = np.load(os.getcwd() + "\\data\\cookie.npy", allow_pickle=True)
-moon = np.load(os.getcwd() + "\\data\\moon.npy", allow_pickle=True)
-pizza = np.load(os.getcwd() + "\\data\\pizza.npy", allow_pickle=True)
-smileyface = np.load(os.getcwd() + "\\data\\smileyface.npy", allow_pickle=True)
+cat = np.load(os.getcwd() + "\\data\\cat.npy", allow_pickle=True)
+cup = np.load(os.getcwd() + "\\data\\cup.npy", allow_pickle=True)
+hat = np.load(os.getcwd() + "\\data\\hat.npy", allow_pickle=True)
 snowman = np.load(os.getcwd() + "\\data\\snowman.npy", allow_pickle=True)
-sun = np.load(os.getcwd() + "\\data\\sun.npy", allow_pickle=True)
-wheel = np.load(os.getcwd() + "\\data\\wheel.npy", allow_pickle=True)
+star = np.load(os.getcwd() + "\\data\\star.npy", allow_pickle=True)
+stop_sign = np.load(os.getcwd() + "\\data\\stop_sign.npy", allow_pickle=True)
+television = np.load(os.getcwd() + "\\data\\television.npy", allow_pickle=True)
+tree = np.load(os.getcwd() + "\\data\\tree.npy", allow_pickle=True)
 
 #Indexing the data in a list
-index = [apple, basketball, circle, cookie, moon, pizza, smileyface, snowman, sun, wheel]
+index = [airplane, cookie, cat, cup, hat, snowman, star, stop_sign, television, tree]
 
 #Prepare the header of the csv output file
 header = ["label"]

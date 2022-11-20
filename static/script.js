@@ -28,8 +28,9 @@ ctx.scale((28/420), (28/420));
 //draw function with event listeners
 function draw(e) {
     if (!painting) return;
-    ctx.lineWidth = 15;
-    ctx.lineCap = "square";
+    ctx.imageSmoothingEnabled = false;
+    ctx.lineWidth = 35;
+    ctx.lineCap = "circle";
     ctx.lineTo(e.clientX - 100, e.clientY - 100);
     ctx.stroke();
     ctx.strokeStyle = "#FFFFFF";
@@ -41,7 +42,7 @@ canvas.addEventListener('mousedown', startPos);
 canvas.addEventListener('mouseup', finPos);
 canvas.addEventListener('mousemove', draw);
 
-//Every 0.5s, this function takes the image data of the input image and returns an array of it
+//Every 1s, this function takes the image data of the input image and returns an array of it
 //It then parses it to a JSON request, that will be fetched by the Flask application
 setInterval(function(){ 
     imgData = ctx.getImageData(0,0,28,28);
