@@ -1,7 +1,7 @@
-# DoodleRec Pre-Alpha is live! - DoodleRec-Deep-Learning-Image-Recognition
+# DoodleRec Alpha is live! - DoodleRec-Deep-Learning-Image-Recognition
 DoodleRec - A Deep Learning algorithm trained on 10 objects from Google Quick Draw's data set, is my first Bachelor Semester Project at the University of Luxembourg.
 
-Current step: upgrade canvas. Main GUI and UX done as well as training and recognition! You can use the web app to input doodles and make it recognize!
+Current step: improve compatibility of test.py
 #
 ## Disclaimer:
 This BSP has been produced by Tinouert Alexandre Adrian, under the supervision of PAT PhD Student DeJesus Tiago as well as Pr. Dr. Guelfi Nicolas at the University of Luxembourg.
@@ -34,3 +34,9 @@ This BSP has been produced by Tinouert Alexandre Adrian, under the supervision o
 2. Launch training.py with an IDLE.
 3. Choose Learning Rate and Iterations
 4. Enjoy!
+
+### - If you want to test the Neural Network on said data:
+1. Make sure that the data.csv file is not empty or corrupted. The provided .csv file contains the data of 10000 random doodles you can use and is a perfect fit.
+2. Make sure the Neural Network is trained, nn.txt shall not be empty.
+3. Choose how many image to test the Neural Network on.
+4. Close the image (Pyplot popup) if you want to continue testing.
