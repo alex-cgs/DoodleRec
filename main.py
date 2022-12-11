@@ -6,6 +6,7 @@ import os #To open the files needed for the Flask application, as well as the us
 import json #To receive the JSON data from JavaScript requests
 from flask import * #For the web application
 import numpy as np #For testing datasets and open the data base that are .npy files
+#import time
 
 
 #From training.py, we import the necessary functions in order to have redundancy between main.py and training.py
@@ -55,14 +56,12 @@ def Compute():
       usermatrix[i][j] = userinput[28*i + j]
     f.write(str(usermatrix[i]) + "\n")
 
-  #Close the .txt
-  f.close()
 
   #Initialize the Final matrix
   Final = [userinput]
 
   #Take the user input and transform it into a numpy array to compute
-  Final = np.array(Final).T
+  Final = np.tile(np.array(Final).T, (1, 10000))
 
   #Check if Final is not a 0 matrix
   if not np.any(Final):
@@ -76,6 +75,17 @@ def Compute():
   Guess = Prediction(A2)
   Guess = names[Guess[0].item()]
   print(Guess)
+
+  #Write the Guess in the yourmatrix.exe file
+  f.write(Guess)
+
+  #Close the .txt
+  f.close()
+
+  #Open todisp.txt, write the guess and close the file
+  f1 = open("static/todisp.txt", "w")
+  f1.write(Guess)
+  f1.close()
 
   return Guess
 

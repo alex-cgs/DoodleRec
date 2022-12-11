@@ -42,7 +42,7 @@ x, y = data.shape
 TrainingData = data.T
 Labels = TrainingData[0]
 DoodleData = TrainingData[1:y]
-DoodleData = DoodleData / 255.
+DoodleData = DoodleData
 
 
 #Initialize random parameters for weights and biases

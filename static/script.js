@@ -29,7 +29,7 @@ ctx.scale((28/420), (28/420));
 function draw(e) {
     if (!painting) return;
     ctx.imageSmoothingEnabled = false;
-    ctx.lineWidth = 35;
+    ctx.lineWidth = 15;
     ctx.lineCap = "circle";
     ctx.lineTo(e.clientX - 100, e.clientY - 100);
     ctx.stroke();
@@ -55,7 +55,7 @@ setInterval(function(){
     var sendData = {
         "userinput" : imgDataBW
         }
-          fetch(`${window.origin}/`, {
+          fetch(``, {
             method: "POST",
             credentials: "include",
             body: JSON.stringify(sendData),
@@ -64,5 +64,9 @@ setInterval(function(){
               "content-type": "application/json"
             })
           })
+
+    fetch('/static/todisp.txt')
+    .then(function(response) {return response.text();})
+    .then(function(data){document.getElementById("data").innerHTML = data;})
 
 }, 1000);
