@@ -1,10 +1,8 @@
-# DoodleRec Alpha is live! - DoodleRec-Deep-Learning-Image-Recognition
+# DoodleRec Beta is live! - DoodleRec-Deep-Learning-Image-Recognition
 DoodleRec - A Deep Learning algorithm trained on 10 objects from Google Quick Draw's data set, is my first Bachelor Semester Project at the University of Luxembourg.
-
-Current step: improve compatibility of test.py
 #
 ## Disclaimer:
-This BSP has been produced by Tinouert Alexandre Adrian, under the supervision of PAT PhD Student DeJesus Tiago as well as Pr. Dr. Guelfi Nicolas at the University of Luxembourg.
+This BSP has been produced by Tinouert Alexandre Adrian, under the supervision of PAT PhD Student De Jesus Tiago as well as Pr. Dr. Guelfi Nicolas at the University of Luxembourg.
 #
 
 ## How to use this program (so far):
@@ -19,7 +17,7 @@ This BSP has been produced by Tinouert Alexandre Adrian, under the supervision o
 1. Run the Flask application from Visual Studio Code or any IDLE.
 2. Go to the local port of the application (essentially http://127.0.0.1:5000).
 3. Try to input some doodles, your image data array is updated every second on the website and in the console of the terminal where you run the Flask application, you can download your image data by clicking the button "Retrieve your Data".
-4. DoodleRec's guess is on your terminal's shell.
+4. DoodleRec's guess is on the page or on yourmatrix.txt.
 5. Enjoy!
 
 
@@ -40,3 +38,6 @@ This BSP has been produced by Tinouert Alexandre Adrian, under the supervision o
 2. Make sure the Neural Network is trained, nn.txt shall not be empty.
 3. Choose how many image to test the Neural Network on.
 4. Close the image (Pyplot popup) if you want to continue testing.
+
+### - Important! To change the data set (if you don't want to download the .npy):
+1. Different data.csv are furnished with different sizes. Rename the wanted data set to "data.csv".

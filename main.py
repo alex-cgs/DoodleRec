@@ -6,7 +6,7 @@ import os #To open the files needed for the Flask application, as well as the us
 import json #To receive the JSON data from JavaScript requests
 from flask import * #For the web application
 import numpy as np #For testing datasets and open the data base that are .npy files
-#import time
+import pandas as pd #To get the length of the data set
 
 
 #From training.py, we import the necessary functions in order to have redundancy between main.py and training.py
@@ -61,7 +61,7 @@ def Compute():
   Final = [userinput]
 
   #Take the user input and transform it into a numpy array to compute
-  Final = np.tile(np.array(Final).T, (1, 10000))
+  Final = np.tile(np.array(Final).T, (1, len(pd.read_csv('nn_training/data/data.csv'))))
 
   #Check if Final is not a 0 matrix
   if not np.any(Final):

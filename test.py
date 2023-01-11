@@ -14,9 +14,10 @@ names = ["Airplane", "Cookie", "Cat", "Cup", "Hat", "Snowman", "Star", "Stop_sig
 #From training.py, we import the necessary functions in order to have redundancy between main.py and training.py
 from doc import Sigmoid, Softmax, OneHot, ForwardPropagation, Prediction, Params
 
+#Init() function to prompt the user for a number of images to analyze
 def Init():
 
-    nb = input("Welcome to test.py! Test the Neural Network over random images from data.csv. Please specify a number of images to test on: ")
+    nb = input("Welcome to test.py! Test the Neural Network over random images from data.csv. If you want new images to test on, you can use setdata.py! Please specify a number of images to test on: ")
 
     try:
         nb = int(nb)
@@ -30,17 +31,18 @@ nb = Init()
 #Import the Weights and Biases from nn.txt
 Weight1, Weight2, Bias1, Bias2 = Params()
 
+#Read the data in data.csv
 data = pd.read_csv('nn_training/data/data.csv')
 data = np.array(data)
-print(data)
 
+#Iterate through random images and analyze them
 for i in range(nb):
     r = rd.randint(0, len(data) - 1)
     image = data[r]
     label = image[0]
     image = image[1:]
     imageR = image.reshape((28, 28)).tolist()
-    image = np.tile(image, (10000, 1)).T
+    image = np.tile(image, (len(data), 1)).T
 
     Z1, A1, Z2, A2 = ForwardPropagation(image, Weight1, Bias1, Weight2, Bias2)
 
@@ -49,6 +51,7 @@ for i in range(nb):
     Guess = names[Guess[0].item()]
     print(f"Image {i + 1}: \n Label: {names[label]} \n Prediction: {Guess} \n Remaining image: {nb - i - 1}, please close the image to continue. \n \n \n")
 
+    #Display the image
     plt.gray()
     plt.imshow(imageR, interpolation='nearest')
     plt.show()
